@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { profile } from "../data/resume";
 
 const descriptions = [
-  "with hands-on experience building high-performance, scalable, responsive web solutions and seamless and intuitive user experiences.",
   "proficient in the latest web technologies and frameworks, continuously expanding my skill set to stay at the forefront of the industry.",
+  "with hands-on experience building high-performance, scalable, responsive web solutions and seamless and intuitive user experiences.",
 ];
 
 const TYPING_SPEED = 40;
