@@ -3,7 +3,7 @@ import { profile } from "../data/resume";
 
 const descriptions = [
   "proficient in the latest web technologies and frameworks, continuously expanding my skill set to stay at the forefront of the industry.",
-  "with hands-on experience building high-performance, scalable, responsive web solutions and seamless and intuitive user experiences.",
+  "with hands-on experience building high-performance, scalable, responsive web solutions with seamless and intuitive user experiences.",
 ];
 
 const TYPING_SPEED = 40;

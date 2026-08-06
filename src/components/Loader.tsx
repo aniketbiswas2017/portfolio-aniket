@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import "./Loader.css";
 
 const DURATION = 1800;
+const EXIT_DURATION = 900;
 
-export default function Loader({ onDone }: { onDone: () => void }) {
+export default function Loader({ onDone, onLeaving }: { onDone: () => void; onLeaving: () => void }) {
   const [count, setCount] = useState(0);
   const [leaving, setLeaving] = useState(false);
 
@@ -19,8 +20,9 @@ export default function Loader({ onDone }: { onDone: () => void }) {
       if (progress >= 1) {
         clearInterval(interval);
         setLeaving(true);
+        onLeaving();
         document.body.style.overflow = "";
-        setTimeout(onDone, 650);
+        setTimeout(onDone, EXIT_DURATION);
       }
     }, 16);
 

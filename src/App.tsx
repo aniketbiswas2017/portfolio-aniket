@@ -17,17 +17,20 @@ import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [heroRevealed, setHeroRevealed] = useState(false);
 
   return (
     <>
-      {loading && <Loader onDone={() => setLoading(false)} />}
+      {loading && (
+        <Loader onDone={() => setLoading(false)} onLeaving={() => setHeroRevealed(true)} />
+      )}
       <Background />
       <Dust />
       <ScrollSpy />
       <NavBar />
       <main>
         <ScrollFade>
-          <Hero />
+          <Hero revealed={heroRevealed} />
         </ScrollFade>
         <ScrollFade>
           <About />

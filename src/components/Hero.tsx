@@ -12,11 +12,11 @@ const container: Variants = {
 };
 
 const item: Variants = {
-  hidden: { opacity: 0, y: 24 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 50 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
 };
 
-export default function Hero() {
+export default function Hero({ revealed }: { revealed: boolean }) {
   return (
     <section id="top" className="hero">
       <div className="hero-grid">
@@ -24,7 +24,7 @@ export default function Hero() {
           className="hero-inner"
           variants={container}
           initial="hidden"
-          animate="show"
+          animate={revealed ? "show" : "hidden"}
         >
           <motion.div variants={item} className="eyebrow">
             <RotatingSkills />
@@ -60,9 +60,9 @@ export default function Hero() {
 
         <motion.div
           className="hero-portrait"
-          initial={{ opacity: 0, scale: 0.94 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          initial={{ opacity: 0, y: 50, scale: 0.94 }}
+          animate={revealed ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.94 }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: revealed ? 0.2 : 0 }}
         >
           <div className="hero-portrait-glow" />
           <img src="/images/portrait.jpg" alt={profile.name} />
@@ -71,8 +71,8 @@ export default function Hero() {
       <motion.div
         className="scroll-cue"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
+        animate={revealed ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: revealed ? 1.2 : 0, duration: 0.8 }}
       >
         <span />
       </motion.div>
