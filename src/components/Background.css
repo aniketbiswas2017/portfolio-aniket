@@ -1,0 +1,18 @@
+.bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-canvas canvas {
+  display: block;
+}
+
+.bg-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, transparent 0%, var(--bg) 75%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, transparent 0%, var(--bg) 80%);
+}
