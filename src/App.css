@@ -315,6 +315,7 @@ main {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center bottom;
   border-radius: 20px;
   filter: grayscale(0.25) contrast(1.05);
   box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.55);
