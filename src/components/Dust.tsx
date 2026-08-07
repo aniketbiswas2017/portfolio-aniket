@@ -1,7 +1,7 @@
 import { useMemo, type CSSProperties } from "react";
 import "./Dust.css";
 
-const COUNT = 55;
+const COUNT = 28;
 
 function rand(min: number, max: number) {
   return min + Math.random() * (max - min);
@@ -14,10 +14,10 @@ export default function Dust() {
         id: i,
         left: rand(0, 100),
         size: rand(1.5, 3.5),
-        duration: rand(10, 24),
-        delay: rand(-24, 0),
+        duration: rand(18, 34),
+        delay: rand(-34, 0),
         drift: rand(-40, 40),
-        opacity: rand(0.25, 0.75),
+        opacity: rand(0.15, 0.45),
       })),
     []
   );

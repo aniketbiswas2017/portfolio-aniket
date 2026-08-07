@@ -11,8 +11,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 32px;
-  transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
+  padding: 18px 32px;
+  transition: background 0.3s ease, border-color 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
@@ -20,7 +20,6 @@ main {
   background: rgba(10, 10, 13, 0.75);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--border);
-  padding: 14px 32px;
 }
 
 .brand {
@@ -89,6 +88,12 @@ main {
   position: relative;
 }
 
+@media (max-width: 900px) {
+  .hero {
+    padding-bottom: 115px;
+  }
+}
+
 .hero-grid {
   max-width: var(--maxw);
   margin: 0 auto;
@@ -107,10 +112,8 @@ main {
   position: relative;
   justify-self: end;
   width: 100%;
-  max-width: 220px;
-  padding: 12px;
-  padding-bottom: 32px;
-  background: #d8d5cd;
+  max-width: 260px;
+  margin-right: 24px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -127,7 +130,7 @@ main {
   position: relative;
   z-index: 1;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   object-position: top center;
   border-radius: 0;
@@ -143,7 +146,8 @@ main {
   }
   .hero-portrait {
     justify-self: center;
-    max-width: 180px;
+    max-width: 210px;
+    margin-right: 0;
     order: -1;
   }
 }
@@ -156,13 +160,15 @@ main {
 
 .hero-title,
 .hero-title-sub {
-  font-family: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
+  font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
   font-size: clamp(36px, 6vw, 72px);
-  font-weight: 800;
-  font-optical-sizing: auto;
-  letter-spacing: -0.04em;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   line-height: 1.3;
-  background: linear-gradient(180deg, #ffffff 0%, #b9c2d6 100%);
+}
+
+.hero-title-line {
+  background: linear-gradient(180deg, #e2e4ea 0%, #939cb0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -178,6 +184,13 @@ main {
   opacity: 0.7;
 }
 
+.hero-title-accent {
+  background: linear-gradient(180deg, #7c94c8 0%, #2c4a8c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .name-highlight {
   color: #d97757;
   font-weight: 700;
@@ -191,6 +204,12 @@ main {
   font-weight: 500;
   line-height: 1.5;
   min-height: 45px;
+}
+
+@media (max-width: 720px) {
+  .hero-subtitle {
+    min-height: 90px;
+  }
 }
 
 .cursor {
@@ -259,6 +278,14 @@ main {
   flex-wrap: wrap;
 }
 
+@media (max-width: 900px) {
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+}
+
 .stat-value {
   font-size: 30px;
   font-weight: 800;
@@ -273,7 +300,7 @@ main {
 
 .scroll-cue {
   position: absolute;
-  bottom: 36px;
+  top: calc(100% - 70px);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -281,9 +308,19 @@ main {
 .scroll-cue span {
   display: block;
   width: 1px;
-  height: 48px;
+  height: 100px;
   background: linear-gradient(var(--accent), transparent);
-  animation: scrollcue 1.8s ease-in-out infinite;
+  animation: scrollcue 2.4s ease-in-out infinite;
+}
+
+@media (max-width: 900px) {
+  .scroll-cue {
+    top: auto;
+    bottom: 6px;
+  }
+  .scroll-cue span {
+    height: 40px;
+  }
 }
 
 @keyframes scrollcue {
@@ -293,6 +330,48 @@ main {
 }
 
 /* ---------- About ---------- */
+#about {
+  position: relative;
+  padding-top: 180px;
+}
+
+.section-scroll-cue {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.55;
+}
+
+.section-scroll-cue span {
+  display: block;
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(var(--accent), transparent);
+  animation: scrollcue 2.4s ease-in-out infinite;
+}
+
+@media (max-width: 720px) {
+  .section-scroll-cue {
+    bottom: 8px;
+  }
+  .section-scroll-cue span {
+    height: 32px;
+  }
+}
+
+@media (max-width: 1000px) {
+  #about {
+    padding-top: 160px;
+  }
+}
+
+@media (max-width: 720px) {
+  #about {
+    padding-top: 80px;
+  }
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.4fr 0.6fr;
@@ -306,11 +385,20 @@ main {
 
 .about-text {
   font-size: clamp(15px, 1.4vw, 17px);
-  line-height: 1.8;
+  line-height: 2.3;
   color: var(--text-dim);
   max-width: 560px;
   font-weight: 400;
   letter-spacing: 0.01em;
+}
+
+.about-photo {
+  max-width: 236px;
+  margin-left: auto;
+  margin-right: 24px;
+  padding: 14px 14px 42px 14px;
+  background: #d8d5cd;
+  box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.55);
 }
 
 .about-photo img {
@@ -318,9 +406,9 @@ main {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center bottom;
-  border-radius: 20px;
+  border-radius: 0;
   filter: grayscale(0.25) contrast(1.05);
-  box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.55);
+  display: block;
 }
 
 @media (max-width: 800px) {
@@ -329,7 +417,8 @@ main {
   }
   .about-photo {
     order: -1;
-    max-width: 320px;
+    max-width: 256px;
+    margin: 0 auto;
   }
 }
 
@@ -345,7 +434,7 @@ main {
   border-radius: var(--radius);
   padding: 24px;
   background: linear-gradient(180deg, var(--surface), transparent);
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  transition: border-color 0.15s ease, transform 0.15s ease;
 }
 
 .skill-group:hover {
@@ -504,7 +593,7 @@ main {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 26px;
-  transition: border-color 0.25s ease, transform 0.25s ease, background 0.25s ease;
+  transition: border-color 0.1s ease, transform 0.1s ease, background 0.1s ease;
 }
 
 .project-card:hover {

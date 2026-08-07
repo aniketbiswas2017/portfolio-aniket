@@ -11,7 +11,7 @@
   top: -10px;
   border-radius: 50%;
   background: #ffffff;
-  box-shadow: 0 0 6px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.3);
   animation-name: dust-fall;
   animation-timing-function: linear;
   animation-iteration-count: infinite;

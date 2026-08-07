@@ -14,8 +14,11 @@ export default function About() {
           </Reveal>
         </div>
         <Reveal delay={0.1} className="about-photo">
-          <img src="/images/travel.jpg" alt={`${profile.name} on location`} />
+          <img src="/images/portrait.jpg" alt={`${profile.name} on location`} />
         </Reveal>
+      </div>
+      <div className="section-scroll-cue" aria-hidden="true">
+        <span />
       </div>
     </section>
   );

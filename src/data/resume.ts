@@ -15,7 +15,7 @@ export const stats = [
   { value: "10+", label: "Years Building Web Apps" },
   { value: "8+", label: "Years in Angular" },
   { value: "6", label: "Companies" },
-  { value: "5+", label: "Product Teams Served" },
+  { value: "5+", label: "Product Teams" },
 ];
 
 export const skills = [

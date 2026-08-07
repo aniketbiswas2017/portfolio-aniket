@@ -30,7 +30,9 @@ export default function Hero({ revealed }: { revealed: boolean }) {
             <RotatingSkills />
           </motion.div>
           <motion.h1 variants={item} className="hero-title">
-            Front End Developer
+            <span className="hero-title-line">
+              Front End <span className="hero-title-accent">Developer</span>
+            </span>
             <RotatingText
               texts={["Full-Stack Developer", "Angular Developer", "React Developer"]}
               interval={10000}
@@ -65,7 +67,7 @@ export default function Hero({ revealed }: { revealed: boolean }) {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: revealed ? 0.2 : 0 }}
         >
           <div className="hero-portrait-glow" />
-          <img src="/images/portrait.jpg" alt={profile.name} />
+          <img src="/images/travel.jpg" alt={profile.name} />
         </motion.div>
       </div>
       <motion.div
