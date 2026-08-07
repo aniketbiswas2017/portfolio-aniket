@@ -110,7 +110,7 @@ main {
   max-width: 220px;
   padding: 12px;
   padding-bottom: 32px;
-  background: #f8f8f8;
+  background: #d8d5cd;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
@@ -156,9 +156,11 @@ main {
 
 .hero-title,
 .hero-title-sub {
+  font-family: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif;
   font-size: clamp(36px, 6vw, 72px);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  font-optical-sizing: auto;
+  letter-spacing: -0.04em;
   line-height: 1.3;
   background: linear-gradient(180deg, #ffffff 0%, #b9c2d6 100%);
   -webkit-background-clip: text;

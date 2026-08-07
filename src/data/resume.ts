@@ -21,7 +21,7 @@ export const stats = [
 export const skills = [
   { tier: "Expert", items: ["Angular (v2–20+)", "TypeScript", "RxJS", "NgRx", "JavaScript ES6+", "HTML5 / CSS3", "WCAG / AODA"] },
   { tier: "Strong", items: ["React", "Node.js", "Express", "GraphQL / REST", "WebSockets", "AWS", "Docker", "CI/CD"] },
-  { tier: "Working", items: ["Python", "Java", "C#", "Kubernetes", "Helm", "PostgreSQL", "MongoDB", "Azure", "FastAPI", "LLM Integration"] },
+  { tier: "Working", items: ["Python", "Java", "C#", "Kubernetes", "Helm", "PostgreSQL", "MongoDB", "Azure", "FastAPI"] },
   { tier: "Testing", items: ["Jest", "Jasmine", "Karma", "Cypress", "Selenium", "Testing Library", "TDD"] },
   { tier: "Interface", items: ["Angular Material", "Bootstrap", "D3.js", "Go.js", "Grafana", "Design systems"] },
   { tier: "Tooling", items: ["Git", "Webpack", "Vite", "ESLint", "SonarQube", "Jira", "NGINX"] },
