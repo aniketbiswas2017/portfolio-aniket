@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Background from "./components/Background";
 import "./components/Background.css";
 import Dust from "./components/Dust";
@@ -49,6 +50,7 @@ function App() {
         </ScrollFade>
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
