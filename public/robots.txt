@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Disallow: /Aniket_Biswas_Resume.pdf
