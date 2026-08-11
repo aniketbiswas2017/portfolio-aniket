@@ -414,6 +414,10 @@ main {
 }
 
 /* ---------- Skills ---------- */
+#skills {
+  min-height: 100vh;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -549,6 +553,10 @@ main {
 }
 
 /* ---------- Work ---------- */
+#work {
+  min-height: 100vh;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -773,7 +781,11 @@ main {
 }
 
 /* ---------- Contact ---------- */
-.contact-section {
+#contact.contact-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
