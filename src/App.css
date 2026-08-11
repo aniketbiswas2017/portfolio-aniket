@@ -267,7 +267,7 @@ main {
 }
 
 .btn-ghost:hover {
-  border-color: var(--accent);
+  border-color: #d97757;
   transform: translateY(-2px);
 }
 
