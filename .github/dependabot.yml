@@ -5,6 +5,16 @@ updates:
     schedule:
       interval: "weekly"
     open-pull-requests-limit: 10
+    ignore:
+      # @react-three/fiber@9.7.0's peer dependency caps react/react-dom at
+      # "<19.3" — bumping past that breaks `npm install`. Remove this once
+      # @react-three/fiber releases support for React 19.3+.
+      - dependency-name: "react"
+        versions: [">=19.3.0"]
+      - dependency-name: "react-dom"
+        versions: [">=19.3.0"]
+      - dependency-name: "@types/react"
+        versions: [">=19.3.0"]
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
